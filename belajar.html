@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  
+    <style>
+        *{
+            font-family: 'Great Vibes', cursive;
+            text-transform: capitalize;
+        }
+        .satu{
+            background-color: #fff;
+            border: 1px dotted #fff ;
+            width: 300px;
+            height: 300px;
+            border-radius: 10px;
+            box-shadow: 3px 3px 5px 5px rgba(237, 234, 228, 0.8);
+        }
+        img{
+            width: 250px;
+            height: 250px;
+            animation: animasi 3s infinite linear;
+        }   
+        @keyframes animasi {
+            0%{
+                filter: drop-shadow(0 0 0px rgba(255, 220, 150, 0.8));
+            }
+            50%{
+                filter: drop-shadow(0 0 20px rgba(255, 220, 150, 0.8));
+
+            }
+            75%{
+                filter: drop-shadow(0 0 40px rgba(255, 220, 150, 0.8));
+            }
+            80%{
+                filter: drop-shadow(0 0 50px rgba(255, 220, 150, 0.8));
+            }
+            100{
+                filter: drop-shadow(0 0 0px rgba(255, 220, 150, 0.8));
+            }
+        }
+        button{
+            background-color: #fff;
+            border: 1px dotted #fff ;
+            width: 150px;
+            height: 50px;
+            border-radius: 10px;
+            box-shadow: 3px 3px 5px 5px rgba(237, 234, 228, 0.8);
+        }
+        /* button:hover{
+              transform: matrix(1, 0, 0, 1, 50, 200);
+        } */
+   
+    </style>
+</head>
+<body>
+    <center>
+        <h2>Namee</h2>
+    <div class="satu">
+        
+    <img src="1.png" alt="" srcset="">
+    <button id="sat"><b>click me</b></button>
+    </div>
+    </center>
+    <script>
+        const btn= document.getElementById("sat");
+        btn.addEventListener("click", ()=>{
+            const a =1;
+            const b=0;
+            const c= 0;
+            const d = 1;
+            const e = Math.floor(Math.random()*300 - 150);
+            const f = Math.floor(Math.random()*300 - 150);
+            
+            btn.style.transform = `matrix(${a},${b},${c},${d},${e},${f})`        
+        })
+    </script>
+</body>
+</html>
